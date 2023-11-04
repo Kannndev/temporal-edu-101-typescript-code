@@ -13,3 +13,8 @@ export async function getSpanishGreeting(name: string): Promise<string> {
 // function above, except the path in the URL called by axios will be "get-spanish-farewell". 
 
 
+export async function getSpanishFarewell(name: string): Promise<string> {
+  const response = await axios.get(`${url}/get-spanish-farewell?name=${name}`);
+
+  return response.data;
+}

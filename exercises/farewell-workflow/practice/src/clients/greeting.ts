@@ -1,10 +1,10 @@
 import { Client } from '@temporalio/client';
 import { randomUUID } from 'node:crypto';
-import { greeting } from '../workflows';
+// import { greeting } from '../workflows';
 
 async function run() {
   const client = new Client();
-  const result = await client.workflow.execute(greeting, {
+  const result = await client.workflow.execute('greeting', {
     args: ['Tina'],
     taskQueue: 'translation-tasks',
     workflowId: 'workflow-' + randomUUID(),
