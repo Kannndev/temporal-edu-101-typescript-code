@@ -18,3 +18,8 @@ export async function getSpanishFarewell(name: string): Promise<string> {
 
   return response.data;
 }
+
+
+export async function getEcho(name: string): Promise<string> {
+  return `echo ${name}`
+}

@@ -4,12 +4,20 @@ import { randomUUID } from 'node:crypto';
 
 async function run() {
   const client = new Client();
-  const result = await client.workflow.execute('greeting', {
-    args: ['Tina'],
+  // const result = await client.workflow.execute('greeting', {
+  //   args: ['Tina'],
+  //   taskQueue: 'translation-tasks',
+  //   workflowId: 'workflow-' + randomUUID(),
+  // });
+
+  const result1 = await client.workflow.execute('echo', {
+    args: ['Kannan'],
     taskQueue: 'translation-tasks',
     workflowId: 'workflow-' + randomUUID(),
   });
-  console.log(`The greeting Workflow returned: ${result}`);
+
+  // console.log(`The greeting Workflow returned: ${result}`);
+  console.log(`The echo Workflow returned: ${result1}`);
 }
 
 run().catch((err) => {

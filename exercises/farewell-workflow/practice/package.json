@@ -10,6 +10,7 @@
     "service": "ts-node src/service.ts",
     "service.watch": "nodemon src/service.ts",
     "worker": "ts-node src/worker.ts",
+    "outsideWorker": "ts-node src/javaworker.ts",
     "worker.watch": "nodemon src/worker.ts",
     "greeting": "ts-node src/clients/greeting.ts",
     "farewell": "ts-node src/clients/farewell.ts"
